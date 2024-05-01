@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entries - Sunrise</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container table-container" id="entriesTable">
+    <h2 class="text-center mb-4">Entries</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Type of Waste</th>
+          <th>Check-In Time</th>
+          <th>Check-Out Time</th>
+          <th>Created</th>
+          <th>Updated</th>
+        </tr>
+      </thead>
+      <tbody id="entriesTableData">
+        <!-- Entries will be populated dynamically here -->
+        <tr>
+          <td>Company A</td>
+          <td>Waste Type 1</td>
+          <td>2024-05-01 10:00 AM</td>
+          <td>2024-05-01 12:00 PM</td>
+          <td>2024-05-01 10:00 AM</td>
+          <td>2024-05-01 12:00 PM</td>
+        </tr>
+        <tr>
+          <td>Company B</td>
+          <td>Waste Type 2</td>
+          <td>2024-05-01 11:00 AM</td>
+          <td>2024-05-01 01:00 PM</td>
+          <td>2024-05-01 11:00 AM</td>
+          <td>2024-05-01 01:00 PM</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function openEntryForm() {
+      window.location.href = "entry.html";
+    }
+    function openEntriesTable() {
+      window.location.href = "entries.html";
+    }
+    function saveEntry() {
+      // This function will not be used on this page
+    }
+    function displayEntries() {
+      // This function will be implemented to fetch entries from a database
+    }
+  </script>
+</body>
+</html>

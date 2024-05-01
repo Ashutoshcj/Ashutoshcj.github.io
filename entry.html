@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entry Form - Sunrise</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container form-container" id="entryForm">
+    <h2 class="text-center mb-4">Entry Form</h2>
+    <form>
+      <div class="form-group">
+        <label for="companyName">Company Name:</label>
+        <input type="text" class="form-control" id="companyName" placeholder="Enter company name">
+      </div>
+      <div class="form-group">
+        <label for="wasteType">Type of Waste:</label>
+        <select class="form-control" id="wasteType">
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+          <option value="Option 3">Option 3</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="checkInTime">Check-In Time:</label>
+        <input type="datetime-local" class="form-control" id="checkInTime">
+      </div>
+      <div class="form-group">
+        <label for="checkOutTime">Check-Out Time:</label>
+        <input type="datetime-local" class="form-control" id="checkOutTime">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="saveEntry()">Save</button>
+    </form>
+  </div>
+  <script>
+    function openEntryForm() {
+      window.location.href = "entry.html";
+    }
+    function openEntriesTable() {
+      window.location.href = "entries.html";
+    }
+    function saveEntry() {
+      var companyName = document.getElementById("companyName").value;
+      var wasteType = document.getElementById("wasteType").value;
+      var checkInTime = document.getElementById("checkInTime").value;
+      var checkOutTime = document.getElementById("checkOutTime").value;
+      var created = new Date().toLocaleString();
+      var updated = new Date().toLocaleString();
+
+      var table = document.getElementById("entriesTableData");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      var cell6 = row.insertCell(5);
+      cell1.innerHTML = companyName;
+      cell2.innerHTML = wasteType;
+      cell3.innerHTML = checkInTime;
+      cell4.innerHTML = checkOutTime;
+      cell5.innerHTML = created;
+      cell6.innerHTML = updated;
+    }
+  </script>
+</body>
+</html>
