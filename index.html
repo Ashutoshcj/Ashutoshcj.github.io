@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entry App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container-fluid main-container">
+    <h1 class="text-center mb-4">Entry App</h1>
+    <div class="text-center">
+      <button class="btn btn-primary mr-2" onclick="openEntryForm()">Entry</button>
+      <button class="btn btn-primary" onclick="openEntriesTable()">Entries</button>
+    </div>
+  </div>
+
+  <div id="entryForm" class="form-container container">
+    <h2 class="text-center mb-4">Entry Form</h2>
+    <form id="entryFormFields">
+      <div class="form-group">
+        <label for="companyName">Company Name:</label>
+        <input type="text" class="form-control" id="companyName" name="companyName">
+      </div>
+
+      <div class="form-group">
+        <label for="wasteType">Type of Waste:</label>
+        <select class="form-control" id="wasteType" name="wasteType">
+          <option value="Type A">Type A</option>
+          <option value="Type B">Type B</option>
+          <option value="Type C">Type C</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="checkInTime">Check-In Time:</label>
+        <input type="datetime-local" class="form-control" id="checkInTime" name="checkInTime">
+      </div>
+
+      <div class="form-group">
+        <label for="checkOutTime">Check-Out Time:</label>
+        <input type="datetime-local" class="form-control" id="checkOutTime" name="checkOutTime">
+      </div>
+
+      <button type="button" class="btn btn-success" onclick="saveEntry()">Save</button>
+    </form>
+  </div>
+
+  <div id="entriesTable" class="table-container container">
+    <h2 class="text-center mb-4">Entries</h2>
+    <table id="entriesTableData" class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Company Name</th>
+          <th scope="col">Type of Waste</th>
+          <th scope="col">Check-In Time</th>
+          <th scope="col">Check-Out Time</th>
+          <th scope="col">Created</th>
+          <th scope="col">Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Entries will be added dynamically here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
