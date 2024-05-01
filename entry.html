@@ -34,6 +34,24 @@
       </div>
       <button type="button" class="btn btn-primary" onclick="saveEntry()">Save</button>
     </form>
-  </div>  
+  </div>
+  <script>
+    function saveEntry() {
+      var companyName = document.getElementById("companyName").value;
+      var wasteType = document.getElementById("wasteType").value;
+      var checkInTime = document.getElementById("checkInTime").value;
+      var checkOutTime = document.getElementById("checkOutTime").value;
+      var created = new Date().toLocaleString();
+      var updated = new Date().toLocaleString();
+
+      // For demonstration purposes, you can log the values to console
+      console.log("Company Name:", companyName);
+      console.log("Waste Type:", wasteType);
+      console.log("Check-In Time:", checkInTime);
+      console.log("Check-Out Time:", checkOutTime);
+      console.log("Created:", created);
+      console.log("Updated:", updated);
+    }
+  </script>
 </body>
 </html>
